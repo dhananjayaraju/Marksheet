@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaSript Practice</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<style>
+		.raju{
+			border-color: blue;
+			padding:10px;
+			text-align: center;
+			background-color:yellow;
+			}
+			.jai{
+				background-color:blue;
+				color:white;
+			}
+	</style>
+</head>
+<body>
+		<table>
+					<thead>
+						<tr class="jai">
+							<th><h3 align = "center">Results</h3></th>
+						</tr>
+						</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Telugu</td>
+							<td><input type ="text" placeholder="Telugu" id="Telugu"></td>
+							<td><span id="displaytelugugrade"></span></td>
+						</tr>
+							<tr>
+								<td>2</td>
+								<td>Hindi</td>
+							<td><input type ="text" placeholder="Hindi" id="Hindi"></td>
+							<td><span id="displayhindigrade"></span></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>English</td>
+							<td><input type ="text" placeholder="English" id="English"></td>
+							<td><span id="displayenglishgrade"></span></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Maths</td>
+							<td><input type ="text" placeholder="Maths" id="Maths"></td>
+							<td><span id="displaymathsgrade"></span></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Science</td>
+							<td><input type ="text" placeholder="Science" id="Science"></td>
+							<td><span id="displaysciencegrade"></span></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Social</td>
+							<td><input type ="text" placeholder="Social" id="Social"></td>
+							<td><span id="displaysocialgrade"></span></td>
+						</tr>
+							<td><span id="displaytotal"></span></td>
+						</tr>
+						<!-- <tr>
+						<td>Grade</td>
+						<td></td>
+						
+						
+						
+						
+						
+						
+						
+						</tr> -->
+					</tbody>
+				</table>	
+				<input type ="submit" value="Submit" onclick="getValue()">
+	
+	<script>
+		//debugger;
+		var gradeS = 'S';
+		var gradeA = 'A';
+		var gradeB = 'B';
+		var gradeC = 'C';
+		var gradeD = 'D';
+		var gradeE = 'E';
+		var gradeU = 'U';
+		
+
+		//document.getElementById("total").innerHTML = total;
+		function getValue(){ //button click function
+			//telugu start
+			
+			var teluguValue = document.getElementById('Telugu').value;
+				if(teluguValue>=90){
+					document.getElementById('displaytelugugrade').innerHTML = gradeS;
+				}else if(teluguValue>=80 && teluguValue<=89){
+					document.getElementById('displaytelugugrade').innerHTML = gradeA;
+				}else if(teluguValue>=70 && teluguValue<=79){
+					document.getElementById('displaytelugugrade').innerHTML = gradeB;
+				}else if(teluguValue>=60 && teluguValue<=69){
+					document.getElementById('displaytelugugrade').innerHTML = gradeC;
+				}else if(teluguValue>=50 && teluguValue<=59){
+					document.getElementById('displaytelugugrade').innerHTML = gradeD;
+				}else if(teluguValue>=40 && teluguValue<=49){
+					document.getElementById('displaytelugugrade').innerHTML = gradeE;
+				}else if(teluguValue<40){
+					document.getElementById('displaytelugugrade').innerHTML = gradeU;
+				}
+
+				var hindiValue = document.getElementById('Hindi').value;
+				if(hindiValue>=90){
+					document.getElementById('displayhindigrade').innerHTML = gradeS;
+				}else if(hindiValue>=80 && hindiValue<=89){
+					document.getElementById('displayhindigrade').innerHTML = gradeA;
+				}else if(hindiValue>=70 && hindiValue<=79){
+					document.getElementById('displayhindigrade').innerHTML = gradeB;
+				}else if(hindiValue>=60 && hindiValue<=69){
+					document.getElementById('displayhindigrade').innerHTML = gradeC;
+				}else if(hindiValue>=50 && hindiValue<=59){
+					document.getElementById('displayhindigrade').innerHTML = gradeD;
+				}else if(hindiValue>=40 && hindiValue<=49){
+					document.getElementById('displayhindigrade').innerHTML = gradeE;
+				}else if(hindiValue<40){
+					document.getElementById('displayhindigrade').innerHTML = gradeU;}
+
+				var englishValue = document.getElementById('English').value;
+				if(englishValue>=90){
+					document.getElementById('displayenglishgrade').innerHTML = gradeS;
+				}else if(englishValue>=80 && englishValue<=89){
+					document.getElementById('displayenglishgrade').innerHTML = gradeA;
+				}else if(englishValue>=70 && englishValue<=79){
+					document.getElementById('displayenglishgrade').innerHTML = gradeB;
+				}else if(englishValue>=60 && englishValue<=69){
+					document.getElementById('displayenglishgrade').innerHTML = gradeC;
+				}else if(englishValue>=50 && englishValue<=59){
+					document.getElementById('displayenglishgrade').innerHTML = gradeD;
+				}else if(englishValue>=40 && englishValue<=49){
+					document.getElementById('displayenglishgrade').innerHTML = gradeE;
+				}else if(englishValue<40){
+					document.getElementById('displayenglishgrade').innerHTML = gradeU;}
+
+				var mathsValue = document.getElementById('Maths').value;
+				if(mathsValue>=90){
+					document.getElementById('displaymathsgrade').innerHTML = gradeS;
+				}else if(mathsValue>=80 && mathsValue<=89){
+					document.getElementById('displaymathsgrade').innerHTML = gradeA;
+				}else if(mathsValue>=70 && mathsValue<=79){
+					document.getElementById('displaymathsgrade').innerHTML = gradeB;
+				}else if(mathsValue>=60 && mathsValue<=69){
+					document.getElementById('displaymathsgrade').innerHTML = gradeC;
+				}else if(mathsValue>=50 && mathsValue<=59){
+					document.getElementById('displaymathsgrade').innerHTML = gradeD;
+				}else if(mathsValue>=40 && mathsValue<=49){
+					document.getElementById('displaymathsgrade').innerHTML = gradeE;
+				}else if(mathsValue<40){
+					document.getElementById('displaymathsgrade').innerHTML = gradeU;}
+
+				var scienceValue = document.getElementById('Science').value;
+				if(scienceValue>=90){
+					document.getElementById('displaysciencegrade').innerHTML = gradeS;
+				}else if(scienceValue>=80 && scienceValue<=89){
+					document.getElementById('displaysciencegrade').innerHTML = gradeA;
+				}else if(scienceValue>=70 && scienceValue<=79){
+					document.getElementById('displaysciencegrade').innerHTML = gradeB;
+				}else if(scienceValue>=60 && scienceValue<=69){
+					document.getElementById('displaysciencegrade').innerHTML = gradeC;
+				}else if(scienceValue>=50 && scienceValue<=59){
+					document.getElementById('displaysciencegrade').innerHTML = gradeD;
+				}else if(scienceValue>=40 && scienceValue<=49){
+					document.getElementById('displaysciencegrade').innerHTML = gradeE;
+				}else if(scienceValue<40){
+					document.getElementById('displaysciencegrade').innerHTML = gradeU;}
+
+				var socialValue = document.getElementById('Social').value;
+				if(socialValue>=90){
+					document.getElementById('displaysocialgrade').innerHTML = gradeS;
+				}else if(socialValue>=80 && socialValue<=89){
+					document.getElementById('displaysocialgrade').innerHTML = gradeA;
+				}else if(socialValue>=70 && socialValue<=79){
+					document.getElementById('displaysocialgrade').innerHTML = gradeB;
+				}else if(socialValue>=60 && socialValue<=69){
+					document.getElementById('displaysocialgrade').innerHTML = gradeC;
+				}else if(socialValue>=50 && socialValue<=59){
+					document.getElementById('displaysocialgrade').innerHTML = gradeD;
+				}else if(socialValue>=40 && socialValue<=49){
+					document.getElementById('displaysocialgrade').innerHTML = gradeE;
+				}else if(socialValue<40){
+					document.getElementById('displaysocialgrade').innerHTML = gradeU;}
+
+
+				var total =parseInt(teluguValue) + parseInt(hindiValue) + parseInt(englishValue) + parseInt(mathsValue) + parseInt(scienceValue) + parseInt(socialValue);
+				alert(total);
+				var Percentage = (total/6);
+				alert(Percentage);
+			}
+				//document.getElementById("total").innerHTML=total;
+				</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
